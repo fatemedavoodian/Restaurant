@@ -1,0 +1,302 @@
+ * {
+    box-sizing: border-box; }
+    html, body { height: 100%;
+     font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; 
+    overflow: hidden; }
+body{
+    min-height:100vh ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(3rem,6vh,5rem);
+    background: radial-gradient(80vw 60vh at 20% 15%, #c380ed 0%, #e663f2 40%, #5f34bc 72%, #522381 100%) fixed;
+    color: #0f172a; /* slate-900 */
+   
+}
+.card{
+    width: 95%;
+    max-width:1180px;
+    height: 100%;
+    min-height: 560px;
+    border-radius: 3vh;
+    border:2px solid rgb(201, 199, 199);
+    box-shadow: 0 24px 80px ;
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(14px) saturate(110%);
+    background-image: url(photo1.png);
+    position: relative;
+    inset: 0 ;
+    background: cover;
+    background-repeat: no-repeat;
+    background-position: right center;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 2;
+}
+.card::before{
+   content: "";
+   position: absolute;
+   inset: 0;
+   background-image: url(photo_2025.png);
+   background-repeat: no-repeat;
+   background-size: 50%;
+   background-position: 45%center;
+   filter: blur(28px) saturate(115%) brightness(105%);
+   z-index: -1;
+   opacity: .65; 
+   overflow: hidden;
+}
+.menu-container{
+    position: absolute;
+    top: 60px;
+    right: 60px;
+}
+ .menu {
+     width: 32px;
+     height: 22px; 
+     position: relative; 
+     cursor: pointer;
+     opacity: .9; 
+    }
+    .menu::before, 
+    .menu::after, 
+    .menu span { 
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 2px; 
+        background:
+        rgba(15,23,42,.85);
+         border-radius: 2px; 
+        
+        }
+    .menu::before { top: 0; }
+    .menu::after { bottom: 0;
+    }
+    .menu span { top: 10px;
+     }
+
+
+.brand{
+    margin-top: 50px;
+    margin-left: 160px;
+    font-size:50px ;
+    font-family: 'Comic Sans MS', 'Chalkboard SE', cursive;
+    transform: skew(-6deg);
+    font-style: italic;
+    color: #260544;
+}
+.inner{
+    display: grid;
+    grid-template-columns: 1.1fr 1.1fr;
+    z-index: 3;
+     overflow: hidden;
+}
+.copy { 
+    position: relative;
+    color: #111827; 
+    }
+.accent{
+    width: 8px;
+    height:182px ;
+    background:linear-gradient(180deg, #ffffff 0%, #ece7ff 45%, #d7caff 100%); ;
+    border-radius: 6px;
+    transform: translate(150px,100px);
+   
+}
+.eyebrow{
+    font-size: clamp(20px, 6vw, 62px) ;
+    font-weight:550 ;
+    transform: translate(180px,-110px);
+    
+}
+h1{
+    font-size: clamp(20px, 6vw, 62px) ;
+    font-weight:550 ;
+    transform: translate(180px,-190px);
+    z-index: 3;
+}
+ .sub { 
+    font-weight: 400;
+     font-size: 2rem;
+     color: aliceblue;
+     transform: translate(180px,-260px);
+      z-index: 3;
+ }
+ .lead{
+    color: #000;
+    font-weight: 600;
+    transform: translate(180px,-260px);
+ }
+ .button.primary{
+   width: 15vh;
+   height: 5vh;
+   color: #fafafb;
+   border-radius: 20px;
+   background: linear-gradient(180deg, #462542, #5f2f5f);
+   border: none;
+   font-size: 2vh;
+   transform: translate(180px,-260px);
+   transition: all 0.3 ease;
+   cursor: pointer;
+ }
+ .button.secondary{
+   width: 15vh;
+   height: 5vh;
+   color: #151516;
+   border: none;
+   border-radius: 20px;
+   font-size: 2vh;
+   cursor: pointer;
+   transition: all 0.3 ease;
+   transform: translate(200px,-260px);
+   background: rgba(245, 245, 245, 0.85); 
+   
+ }
+
+.schedule {
+    position: relative;
+    display: flex !important;
+    gap: 34px;
+    margin-top: 30px;
+    color: rgba(17,24,39,.9);
+    font-size: 13px;
+    margin-left: 180px;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 10;
+    transform: translateY(-240px);
+}
+
+.hour-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 1 !important;
+}
+
+.hour-section h2 {
+    font-size: 18px;
+    color: white !important;
+    margin-bottom: 8px;
+    opacity: 1 !important;
+    font-weight: bold;
+}
+
+.hour-section span {
+    font-size: 14px;
+    color: #e2e8f0 !important;
+    opacity: 1 !important;
+    font-weight: 500;
+}
+
+@media (max-width: 800px) {
+    body {
+        padding: 1rem;
+        align-items: flex-start;
+    }
+
+    .card {
+        width: 100%;
+        min-height: auto;
+        padding-bottom: 30px;
+    }
+
+    .inner {
+        grid-template-columns: 1fr;
+    }
+
+    .brand {
+        margin-left: 24px;
+        margin-top: 24px;
+        font-size: 32px;
+    }
+
+    .menu-container {
+        top: 28px;
+        right: 24px;
+    }
+
+    .copy {
+        padding: 20px 24px 0;
+    }
+
+    .accent,
+    .eyebrow,
+    h1,
+    .sub,
+    .lead,
+    .actions,
+    .schedule {
+        transform: none !important;
+        margin-left: 0 !important;
+    }
+
+    .accent {
+        display: none;
+    }
+
+    .eyebrow {
+        font-size: 34px;
+        line-height: 1.1;
+    }
+
+    h1 {
+        font-size: 42px;
+        line-height: 1;
+    }
+
+    .sub {
+        font-size: 20px;
+        color: #fff;
+        margin-top: 8px;
+    }
+
+    .lead {
+        margin-top: 16px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 18px;
+    }
+
+    .button.primary,
+    .button.secondary {
+        width: auto;
+        min-width: 120px;
+        height: 42px;
+        transform: none !important;
+        font-size: 14px;
+    }
+
+    .schedule {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        margin-top: 28px;
+        padding-bottom: 10px;
+        transform: none !important;
+        margin-left: 0 !important;
+    }
+
+    .hour-section {
+        align-items: flex-start;
+    }
+
+    .hour-section h2 {
+        font-size: 16px;
+    }
+
+    .hour-section span {
+        font-size: 13px;
+    }
+}
